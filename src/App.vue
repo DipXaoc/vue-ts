@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
-import { increment, decrement } from './btns'
-import { onMounted, ref } from "vue";
+import { calculation } from './btns'
+import {onMounted, onUpdated, ref} from "vue";
 
-const count = ref(increment());
+const count = ref(0);
+
+const updateCount = (bool)=> {
+  calculation(bool);
+  count.value = calculation(null);
+}
 
 </script>
 
@@ -13,10 +18,10 @@ const count = ref(increment());
       <button type="button">count is {{ count }}</button>
     </div>
     <div class="me-btns">
-      <div class="btn --increment" @click="increment(count)">
+      <div class="btn" @click="updateCount(true)">
         <img src="./assets/btn5.png" />
       </div>
-      <div class="btn --decrement" @click="decrement(count)">
+      <div class="btn" @click="updateCount(false)">
         <img src="./assets/btn5.png" />
       </div>
     </div>

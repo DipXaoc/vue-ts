@@ -1,11 +1,5 @@
-export const increment = function (sum: number = 0): number {
+let result:number = 0;
 
-    sum++
-    console.log(sum);
-    return sum
-}
-
-export const decrement = function (sum: number = 0): number {
-    console.log(sum);
-    return sum++
+export const calculation = function (bool: boolean | null): number {
+    return bool === null ? result : bool ? result++ : result--;
 }
