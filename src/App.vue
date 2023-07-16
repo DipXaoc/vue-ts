@@ -25,7 +25,6 @@ const updateCount = (bool)=> {
         <img src="./assets/btn5.png" />
       </div>
     </div>
-
   </div>
   <HelloWorld msg="Метроном" />
 </template>
