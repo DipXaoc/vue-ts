@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import { calculation } from './btns'
-import {onMounted, onUpdated, ref} from "vue";
+import { ref } from "vue";
 
 const count = ref(0);
 
