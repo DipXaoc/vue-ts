@@ -13,8 +13,9 @@ export const countStep = {
     10: 10
 }
 
-export const startTimer = function () {
+export const startTimer = function (count: number) {
     setInterval(()=> {
-        audio.play();
-    }, 1000)
+        return count
+        /*audio.play();*/
+    }, 1000);
 }

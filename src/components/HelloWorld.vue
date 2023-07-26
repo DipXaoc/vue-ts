@@ -7,8 +7,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
-
+  <h1 v-html="props.msg" />
 </template>
 
 <style scoped>

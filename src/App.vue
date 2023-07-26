@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
-import { calculation } from './btns'
-import { ref } from "vue";
 import MeCounter from "./components/MeCounter.vue";
-
 
 </script>
 

@@ -1,17 +1,23 @@
 <script setup lang="ts">
-import { calculation, countStep, startTimer } from '../btns'
+import { calculation, countStep } from '../btns'
 import { ref } from "vue";
 const count = ref(0);
+let countT = ref(0);
 
-const updateCount = (bool, value)=> {
+const updateCount = (bool: any, value: any)=> {
   calculation(bool, value);
   count.value = calculation(null);
 }
 
 const start = ()=> {
-
+  startTimer(0);
 }
-
+const startTimer = function (count: number) {
+  setInterval(()=> {
+    return count++
+    /*audio.play();*/
+  }, 1000);
+}
 
 </script>
 
@@ -19,6 +25,9 @@ const start = ()=> {
   <div>
     <div class="me-counter__timer">
       <button type="button">{{ count }}</button>
+    </div>
+    <div class="me-counter__timer">
+      <button type="button">{{ countT }}</button>
     </div>
     <div class="me-btns">
       <div class="me-btns__block">
